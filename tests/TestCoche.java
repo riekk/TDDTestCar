@@ -22,4 +22,11 @@ public class TestCoche {
         newCar.desacelerate(20);
         Assertions.assertEquals(30, newCar.velocity);
     }
+    @Test
+    public void test_desacelerate_car_velocity_decrease_cant_under_0() {
+        Car newCar = new Car();
+        newCar.velocity = 50;
+        newCar.desacelerate(80);
+        Assertions.assertEquals(0, newCar.velocity);
+    }
 }
