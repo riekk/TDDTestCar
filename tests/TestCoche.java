@@ -10,11 +10,16 @@ public class TestCoche {
 
     @Test
     public void test_acelerate_car_velocity_increase() {
-        Car newCar = new
-
-
-                Car();
+        Car newCar = new Car();
         newCar.acelerate(30);
+        Assertions.assertEquals(30, newCar.velocity);
+    }
+
+    @Test
+    public void test_desacelerate_car_velocity_decrease() {
+        Car newCar = new Car();
+        newCar.velocity = 50;
+        newCar.desacelerate(20);
         Assertions.assertEquals(30, newCar.velocity);
     }
 }
