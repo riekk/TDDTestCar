@@ -8,5 +8,8 @@ public class Car {
 
     public void desacelerate(int desaceleration) {
         velocity -= desaceleration;
+        if(velocity < 0) {
+            velocity =0;
+        }
     }
 }
